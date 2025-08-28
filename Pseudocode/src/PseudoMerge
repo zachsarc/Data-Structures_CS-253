@@ -1,0 +1,28 @@
+Begin program
+
+mergeSort( take array, start and end as parameters) {
+pick middle index
+recursively call mergeSort method on left side from start to middle (Inclusive)
+recursively call mergeSort method on right side from middle + 1 to end
+merge(take start, middle and end as parameters)
+}
+
+merge (take array, start, middle, end as parameters) {
+create left half array
+create right half array
+
+array copy from left half original into left half
+array copy from right half original into right half
+
+create pointers i = 0, j = 0, k = start;
+
+if (arr[i] > arr[j]) {
+swap the two elements
+increment i++
+increment j++
+}
+k++
+
+
+
+}

@@ -1,0 +1,12 @@
+Begin Program
+    for (starting at beginning; iterating over length of array; Increment by 1) {
+    Initialize boolean variable false
+        for (starting at beginning + 1, iterating over length of array - 1; Increment by 1)
+        if (first integer is bigger than second integer) {
+            swap the two variables
+            Set boolean variable to true
+    }
+    if (swapped is false) {
+    break out of loop;
+    }
+    End program
