@@ -7,7 +7,7 @@ public class LinkedListClassImplementation {
     void insert(int data) {
         Node newNode = new Node(data);
 
-        if (this.head == null) {
+        if (this.head == null) { // If no head, assign head to new Node
             this.head = newNode;
         } else {
             Node cur = this.head;
@@ -58,26 +58,6 @@ public class LinkedListClassImplementation {
         return value;
     }
 
-
-        public static void main(String[] args) {
-            LinkedListClassImplementation ll = new LinkedListClassImplementation();
-            ll.insert(20);
-            ll.insert(30);
-            ll.insert(40);
-            System.out.println("Breakpoint");
-            ll.printList();
-        }
-
-    void printList() {
-        Node current = head;
-        while (current != null) {
-            System.out.print(current.data + " -> ");
-            current = current.next;
-        }
-        System.out.println("null"); // Marks the end of the list
-    }
-
-
     static class Node {
         int data;
         Node next;
@@ -86,5 +66,25 @@ public class LinkedListClassImplementation {
             this.data = data;
             this.next = null;
         }
+    }
+
+
+    // Testing
+    public static void main(String[] args) {
+        LinkedListClassImplementation ll = new LinkedListClassImplementation();
+        ll.insert(20);
+        ll.insert(30);
+        ll.insert(40);
+        System.out.println("Breakpoint");
+        ll.printList();
+    }
+
+    void printList() {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " -> ");
+            current = current.next;
+        }
+        System.out.println("null"); // Marks the end of the list
     }
 }

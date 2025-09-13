@@ -1,10 +1,14 @@
+import java.util.HashSet;
+
 public class HwOnePTwo {
     public static void main(String[] args) {
         testFindPairsBruteForce();
         testFindPairsImproved();
+        testFindPairsHash();
     }
-    // Brute Force
-    public void findPairsBruteForce(int[] input, int target) {
+
+    // 1st implementation Brute Force approach
+    public static void findPairsBruteForce(int[] input, int target) {
         if (input == null || input.length < 2) {
             System.out.println("Not possible.");
             return;
@@ -49,19 +53,13 @@ public class HwOnePTwo {
         System.out.println("Execution time: " + elapsedTime + " ms");
     }
 
-
-
-
-    // Sort + Two Pairs
-    public void findPairsImproved(int[] input, int target) {
+    // 2nd implementation Sort + Two Pairs
+    public static void findPairsImproved(int[] input, int target) {
         if (input == null || input.length < 2) {
             System.out.println("Not possible.");
             return;
         }
-
-        // If you don't want to mutate the original, copy it first:
-        // int[] a = Arrays.copyOf(input, input.length);
-        int[] a = input; // use given array in-place per assignment hint
+        int[] a = input;
 
         mergeSort(a, 0, a.length - 1); // O(n log n) sort (given)
 
@@ -109,6 +107,49 @@ public class HwOnePTwo {
         // Time calculation for execution
         long elapsedTime = (endTime - startTime) / 1_000_000; // convert to milliseconds
         System.out.println("Execution time: " + elapsedTime + " ms");
+    }
+
+    // 3rd implementation involving hashSet approach
+    public static void findPairsHash(int[] input, int target) {
+        if (input == null || input.length < 2) {
+            System.out.println("Not possible.");
+            return;
+        }
+
+        HashSet<Integer> seen = new HashSet<>();
+        boolean found = false;
+
+        for (int x : input) {
+            int y = target - x;
+            if (seen.contains(y)) {
+                // Print in sorted order to avoid "other permutation"
+                int a = Math.min(x, y);
+                int b = Math.max(x, y);
+                System.out.println(a + " " + b);
+                found = true;
+            }
+            seen.add(x);
+        }
+
+        if (!found) {
+            System.out.println("Not possible.");
+        }
+    }
+
+    // Test for hashSet approach
+    public static void testFindPairsHash() {
+        HwOnePTwo hw = new HwOnePTwo();
+        int[] input = {2, 7, 11, 15, 1, 8, 4};
+        int target = 9;
+
+        long startTime = System.nanoTime();
+        System.out.println("Testing findPairsHash with input: "
+                + java.util.Arrays.toString(input) + " and target: " + target);
+        hw.findPairsHash(input, target);
+        long endTime = System.nanoTime();
+
+        long elapsedMs = (endTime - startTime) / 1_000_000;
+        System.out.println("Execution time: " + elapsedMs + " ms");
     }
 
 
