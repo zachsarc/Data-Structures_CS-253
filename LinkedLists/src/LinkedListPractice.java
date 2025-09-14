@@ -7,16 +7,16 @@ public class LinkedListPractice {
     }
 
     void insert(int data) {
-        Node newNode = new Node(data); // create node
+        Node newNode = new Node(data);
 
-        if (this.head == null) { // check if there's no head
+        if (this.head == null) {
             this.head = newNode;
         } else {
-            Node cur = this.head;
-            while (cur.next != null) { // get last node
-                cur = cur.next; // assign the current node to the last node
+            Node cur = newNode.next;
+            while (newNode.next != null) {
+                cur = cur.next;
             }
-            cur.next = newNode; // assign the newNode to the now last node
+            this.head = cur;
         }
     }
 
@@ -28,6 +28,16 @@ public class LinkedListPractice {
         } else {
             newNode.next = this.head;
             this.head = newNode;
+        }
+    }
+
+    int deleteHead() {
+        int value;
+
+        if (this.head == null) {
+            return -1; // the list is empty
+        } else {
+
         }
     }
 

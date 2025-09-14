@@ -25,8 +25,8 @@ public class LinkedListClassImplementation {
         if (this.head == null) {
             this.head = newNode;
         } else {
-            newNode.next = this.head;
-            this.head = newNode;
+            newNode.next = this.head; // point to the new head
+            this.head = newNode; // make the new head the new node
         }
     }
 
