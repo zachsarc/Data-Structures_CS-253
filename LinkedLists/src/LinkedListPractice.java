@@ -1,6 +1,3 @@
-import java.nio.file.Path;
-import java.util.LinkedList;
-
 public class LinkedListPractice {
     Node head;
     public LinkedListPractice() {
@@ -10,14 +7,15 @@ public class LinkedListPractice {
     void insert(int data) {
         Node newNode = new Node(data);
 
-        if (this.head == null) {
-            this.head = newNode;
+        if (head == null) {
+            head = newNode;
+            return;
         } else {
-            Node cur = newNode.next;
-            while (newNode.next != null) {
+            Node cur = head;
+            while (cur.next != null) {
                 cur = cur.next;
             }
-            this.head = cur;
+            cur.next = newNode;
         }
     }
 

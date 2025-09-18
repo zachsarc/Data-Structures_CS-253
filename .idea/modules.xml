@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/HwOne/HwOne.iml" filepath="$PROJECT_DIR$/HwOne/HwOne.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedLists/LinkedLists.iml" filepath="$PROJECT_DIR$/LinkedLists/LinkedLists.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pseudocode/Pseudocode.iml" filepath="$PROJECT_DIR$/Pseudocode/Pseudocode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RankedSequenceADT/RankedSequenceADT.iml" filepath="$PROJECT_DIR$/RankedSequenceADT/RankedSequenceADT.iml" />
     </modules>
   </component>
 </project>

@@ -18,7 +18,6 @@ public class HwOnePTwo {
         for (int i = 0; i < input.length - 1; i++) {
             for (int j = i + 1; j < input.length; j++) {
                 if (input[i] + input[j] == target) {
-                    // Print the smaller value first to avoid order differences like "25 -3"
                     int a = Math.min(input[i], input[j]);
                     int b = Math.max(input[i], input[j]);
                     System.out.println(a + " " + b);
@@ -86,8 +85,6 @@ public class HwOnePTwo {
         }
     }
 
-    // Test for finding pairs and merge sort
-    // Test method for findPairsImproved
     // Test method for findPairsImproved
     public static void testFindPairsImproved() {
         HwOnePTwo hw = new HwOnePTwo();
@@ -154,7 +151,6 @@ public class HwOnePTwo {
 
 
     // Merge Sort
-
     private static void mergeSort(int[] arr, int startIndex, int endIndex) {
         if (startIndex >= endIndex) {
             return;
