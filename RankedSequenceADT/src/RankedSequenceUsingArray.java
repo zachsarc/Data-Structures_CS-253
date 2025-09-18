@@ -69,6 +69,10 @@ public class RankedSequenceUsingArray<T> {
             size++;
         }
 
+        public void deleteItem(int rank) {
+
+        }
+
         // Temporary helper
         public void pushBack(T item) {
             ensureCapacity(size + 1);
