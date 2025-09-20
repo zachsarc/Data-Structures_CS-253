@@ -6,8 +6,6 @@ public class BubbleSort {
         System.out.println("array before sorting: " + Arrays.toString(a));
         sort(a);
         System.out.println("array after sorting: " + Arrays.toString(a));
-
-
     }
     public static void sort(int[] arr) {
         int n = arr.length;
