@@ -1,6 +1,5 @@
 public class RecursiveBubble {
     public static void bubbleRec(int[] arr) {
-
         int n = arr.length;
         if (n == 1) {
             return;
