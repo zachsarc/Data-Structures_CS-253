@@ -1,4 +1,13 @@
+import java.util.Arrays;
+
 public class SelectionSort {
+    public static void main(String[] args) {
+        int[] a = new int[]{1,26,3,2,100};
+        System.out.println("array before sorting: " + Arrays.toString(a));
+        sort(a);
+        System.out.println("array after sorting: " + Arrays.toString(a));
+    }
+
     public static void sort(int[] arr) {
         int n = arr.length;
 
@@ -9,9 +18,9 @@ public class SelectionSort {
                     minIndex = j;
                 }
             }
-            int temp = arr[i];
-            arr[i] = arr[minIndex];
-            arr[minIndex] = temp;
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
         }
     }
 }
