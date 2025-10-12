@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/Pseudocode/Pseudocode.iml" filepath="$PROJECT_DIR$/Pseudocode/Pseudocode.iml" />
       <module fileurl="file://$PROJECT_DIR$/RankedSequenceADT/RankedSequenceADT.iml" filepath="$PROJECT_DIR$/RankedSequenceADT/RankedSequenceADT.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sorting/Sorting.iml" filepath="$PROJECT_DIR$/Sorting/Sorting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Trees/Trees.iml" filepath="$PROJECT_DIR$/Trees/Trees.iml" />
     </modules>
   </component>
 </project>
